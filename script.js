@@ -6,8 +6,11 @@ const median = nums => {
   const sorted = nums.slice().sort((a, b) => a - b);
   const length = sorted.length;
   const middle = length / 2 - 1;
-  return;
-  isEven(length) ? average(middle + 1) : nums(Math.ceil(middle))
+  return isEven(length) 
+  ? average([sorted[middle], sorted[middle + 1]])
+  : sorted[Math.ceil(middle)];
+
+  
 }
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
